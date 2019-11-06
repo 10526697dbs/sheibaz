@@ -1,0 +1,22 @@
+import numpy as np
+
+def userinput():
+    student_list = []
+    roll_no = int(input('Enter roll number : '))
+    name = input('Enter name of student : ')
+    course_code = input('Enter course code : ')
+    student_list.append(roll_no)
+    student_list.append(name)
+    student_list.append(course_code)
+    return student_list
+
+
+student = []
+for _ in range(3):
+    student.append(np.array(userinput()))
+print(student)
+def add(student):
+    student.append(np.array(userinput()))
+    return student
+    student = add(student)
+print(student)
